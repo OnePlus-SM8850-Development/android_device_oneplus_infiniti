@@ -287,10 +287,10 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M 0,80
-        M -42,80
-        A 34,34 90 1,0 42,80
-        A 34,34 90 1,0 -42,80
+        M 0,83
+        M -41,83
+        A 41,41 0 1,0 41,83
+        A 41,41 0 1,0 -41,83
         Z
     </string>
 
