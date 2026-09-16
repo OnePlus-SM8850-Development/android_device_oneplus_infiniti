@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use panel-specific masks for rounded corners and the camera cutout. -->
+    <bool name="config_usePhysicalPanelMasks">true</bool>
+</resources>
