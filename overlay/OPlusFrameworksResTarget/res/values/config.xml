@@ -36,7 +36,7 @@
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
          Must be in the range specified by minimum and maximum. -->
-    <item type="dimen" name="config_screenBrightnessSettingDefaultFloat">0.45882353</item>
+    <item type="dimen" name="config_screenBrightnessSettingDefaultFloat">0.399951</item>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -76,30 +76,29 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
+        <item>2</item>
+        <item>4</item>
         <item>6</item>
+        <item>8</item>
         <item>10</item>
+        <item>15</item>
         <item>20</item>
+        <item>25</item>
         <item>30</item>
         <item>40</item>
-        <item>50</item>
         <item>60</item>
-        <item>70</item>
-        <item>80</item>
-        <item>90</item>
+        <item>95</item>
         <item>100</item>
-        <item>150</item>
         <item>200</item>
         <item>300</item>
         <item>400</item>
         <item>500</item>
-        <item>600</item>
-        <item>700</item>
-        <item>800</item>
-        <item>900</item>
         <item>1000</item>
+        <item>1100</item>
         <item>1200</item>
+        <item>1300</item>
         <item>1400</item>
+        <item>1500</item>
         <item>1600</item>
         <item>1700</item>
         <item>1800</item>
@@ -109,6 +108,7 @@
         <item>7000</item>
         <item>10000</item>
         <item>15000</item>
+        <item>20000</item>
         <item>30000</item>
         <item>40000</item>
     </integer-array>
@@ -126,63 +126,42 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>6.0</item>    <!--      0 - 1     -->
-        <item>12.0</item>   <!--      1 - 6     -->
-        <item>30.0</item>   <!--      6 - 10    -->
-        <item>100.0</item>  <!--     10 - 20    -->
-        <item>140.0</item>  <!--     20 - 30    -->
-        <item>160.0</item>  <!--     30 - 40    -->
-        <item>180.0</item>  <!--     40 - 50    -->
-        <item>200.0</item>  <!--     50 - 60    -->
-        <item>230.0</item>  <!--     60 - 70    -->
-        <item>240.0</item>  <!--     70 - 80    -->
-        <item>250.0</item>  <!--     80 - 90    -->
-        <item>260.0</item>  <!--     90 - 100   -->
-        <item>270.0</item>  <!--    100 - 150   -->
-        <item>280.0</item>  <!--    150 - 200   -->
-        <item>290.0</item>  <!--    200 - 300   -->
-        <item>300.0</item>  <!--    300 - 400   -->
-        <item>310.0</item>  <!--    400 - 500   -->
-        <item>320.0</item>  <!--    500 - 600   -->
-        <item>330.0</item>  <!--    600 - 700   -->
-        <item>340.0</item>  <!--    700 - 800   -->
-        <item>360.0</item>  <!--    800 - 900   -->
-        <item>380.0</item>  <!--    900 - 1000  -->
-        <item>420.0</item>  <!--   1000 - 1200  -->
-        <item>460.0</item>  <!--   1200 - 1400  -->
-        <item>500.0</item>  <!--   1400 - 1600  -->
-        <item>540.0</item>  <!--   1600 - 1700  -->
-        <item>580.0</item>  <!--   1700 - 1800  -->
-        <item>600.0</item>  <!--   1800 - 1900  -->
-        <item>660.0</item>  <!--   1900 - 2000  -->
-        <item>680.0</item>  <!--   2000 - 4000  -->
-        <item>700.0</item>  <!--   4000 - 7000  -->
-        <item>720.0</item>  <!--   7000 - 10000 -->
-        <item>740.0</item>  <!--  10000 - 15000 -->
-        <item>760.0</item>  <!--  15000 - 30000 -->
-        <item>780.0</item>  <!--  30000 - 40000 -->
-        <item>800.0</item>  <!--      40000+    -->
-    </array>
-
-    <!-- An array describing the screen's backlight values corresponding to the brightness
-         values in the config_screenBrightnessNits array.
-
-         This array should be equal in size to config_screenBrightnessBacklight. -->
-    <integer-array name="config_screenBrightnessBacklight">
-        <item>1</item>
-        <item>255</item>
-    </integer-array>
-
-    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
-         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
-         should be measured with an all white image while the display is in the fully on state.
-         Note that this value should *not* reflect the maximum brightness value for any high
-         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-
-         This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>2</item>
-        <item>800</item>
+        <item>2.5</item>       <!--      0 lux -->
+        <item>7.5</item>       <!--      2 lux -->
+        <item>13.0</item>      <!--      4 lux -->
+        <item>18.0</item>      <!--      6 lux -->
+        <item>25.0</item>      <!--      8 lux -->
+        <item>30.0</item>      <!--     10 lux -->
+        <item>38.0</item>      <!--     15 lux -->
+        <item>45.0</item>      <!--     20 lux -->
+        <item>50.0</item>      <!--     25 lux -->
+        <item>55.0</item>      <!--     30 lux -->
+        <item>60.0</item>      <!--     40 lux -->
+        <item>70.0</item>      <!--     60 lux -->
+        <item>79.0</item>      <!--     95 lux -->
+        <item>82.0</item>      <!--    100 lux -->
+        <item>90.0</item>      <!--    200 lux -->
+        <item>98.0</item>      <!--    300 lux -->
+        <item>106.0</item>     <!--    400 lux -->
+        <item>113.0</item>     <!--    500 lux -->
+        <item>152.0</item>     <!--   1000 lux -->
+        <item>160.0</item>     <!--   1100 lux -->
+        <item>168.0</item>     <!--   1200 lux -->
+        <item>177.0</item>     <!--   1300 lux -->
+        <item>185.0</item>     <!--   1400 lux -->
+        <item>194.0</item>     <!--   1500 lux -->
+        <item>203.0</item>     <!--   1600 lux -->
+        <item>212.0</item>     <!--   1700 lux -->
+        <item>222.0</item>     <!--   1800 lux -->
+        <item>232.0</item>     <!--   1900 lux -->
+        <item>243.0</item>     <!--   2000 lux -->
+        <item>391.0</item>     <!--   4000 lux -->
+        <item>500.0</item>     <!--   7000 lux -->
+        <item>545.0</item>     <!--  10000 lux -->
+        <item>600.0</item>     <!--  15000 lux -->
+        <item>650.0</item>     <!--  20000 lux -->
+        <item>720.0</item>     <!--  30000 lux -->
+        <item>800.0</item>     <!--  40000 lux -->
     </array>
 
     <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
@@ -213,8 +192,8 @@
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
         <item>5000</item> <!--     0 - 50    -->
-        <item>1500</item> <!--    50 - 115   -->
-        <item>750</item>  <!--   115 - 500   -->
+        <item>1500</item> <!--    50 - 150   -->
+        <item>750</item>  <!--   150 - 500   -->
         <item>600</item>  <!--   500 - 1000  -->
         <item>500</item>  <!--  1000 - 2000  -->
         <item>500</item>  <!--  2000 - 4000  -->
@@ -228,9 +207,9 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientDarkeningThresholds">
-        <item>1</item>    <!--     0 - 50    -->
-        <item>50</item>   <!--    50 - 150   -->
-        <item>450</item>  <!--   115 - 500   -->
+        <item>500</item>  <!--     0 - 50    -->
+        <item>500</item>  <!--    50 - 150   -->
+        <item>450</item>  <!--   150 - 500   -->
         <item>500</item>  <!--   500 - 1000  -->
         <item>500</item>  <!--  1000 - 2000  -->
         <item>500</item>  <!--  2000 - 4000  -->
