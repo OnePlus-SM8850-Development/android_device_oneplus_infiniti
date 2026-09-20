@@ -18,7 +18,7 @@ DEVICE_PATH := device/oneplus/infiniti
 TARGET_OTA_ASSERT_DEVICE := OP60FFL1,OP611FL1
 
 # Display
-TARGET_SCREEN_DENSITY := 540
+TARGET_SCREEN_DENSITY := 560
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
@@ -26,6 +26,7 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
+TARGET_RECOVERY_DENSITY := xxhdpi
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include the proprietary files BoardConfig.
